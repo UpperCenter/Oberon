@@ -15,14 +15,14 @@
 		<meta property="og:url" content="https://cyber.lol/">
 		<meta property="og:title" content="Oberon - The Blazing Fast Cyber Range">
 		<meta property="og:description" content="Welcome to the online portal for the Oberon Cyber Range.">
-		<meta property="og:image" content="asset('images/meta.webp');">
+		<meta name="og:image" content="{{ asset('images/meta.webp')  }}"/>
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image">
 		<meta property="twitter:url" content="https://cyber.lol/">
 		<meta property="twitter:title" content="Oberon - The Blazing Fast Cyber Range">
 		<meta property="twitter:description" content="Welcome to the online portal for the Oberon Cyber Range.">
-		<meta property="twitter:image" content="asset('images/meta.webp');">
+		<meta property="twitter:image" content="{{ asset('images/meta.webp')  }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
