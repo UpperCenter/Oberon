@@ -17,11 +17,32 @@
                     </x-jet-nav-link>
                 </div>
 
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('admin') }}" :active="request()->routeIs('admin')">
-                        {{ __('Admin Panel') }}
-                    </x-jet-nav-link>
-                </div>
+                @if (auth()->user()->role_id == 1)
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('administrator.users.index') }}"
+                            :active="request()->routeIs('administrator.users.index')">
+                            {{ __('User Management') }}
+                        </x-jet-nav-link>
+                    </div>
+                @endif
+
+                @if (auth()->user()->role_id == 2)
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('student.flags.index') }}"
+                            :active="request()->routeIs('student.flags.index')">
+                            {{ __('Flags') }}
+                        </x-jet-nav-link>
+                    </div>
+                @endif
+
+                @if (auth()->user()->role_id == 3)
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('lecturer.monitoring.index') }}"
+                            :active="request()->routeIs('lecturer.monitoring.index')">
+                            {{ __('Student Monitoring') }}
+                        </x-jet-nav-link>
+                    </div>
+                @endif
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -131,7 +152,7 @@
                                 @csrf
 
                                 <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+   this.closest('form').submit();">
                                     {{ __('Log Out') }}
                                 </x-jet-dropdown-link>
                             </form>
@@ -164,12 +185,32 @@
             </x-jet-responsive-nav-link>
         </div>
 
-        <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('admin') }}" :active="request()->routeIs('admin')">
-                {{ __('Admin Panel') }}
-            </x-jet-responsive-nav-link>
-        </div>
+        @if (auth()->user()->role_id == 1)
+            <div class="pt-2 pb-3 space-y-1">
+                <x-jet-responsive-nav-link href="{{ route('administrator.users.index') }}"
+                    :active="request()->routeIs('administrator.users.index')">
+                    {{ __('User Management') }}
+                </x-jet-responsive-nav-link>
+            </div>
+        @endif
 
+        @if (auth()->user()->role_id == 2)
+            <div class="pt-2 pb-3 space-y-1">
+                <x-jet-responsive-nav-link href="{{ route('student.flags.index') }}"
+                    :active="request()->routeIs('student.flags.index')">
+                    {{ __('Flags') }}
+                </x-jet-responsive-nav-link>
+            </div>
+        @endif
+
+        @if (auth()->user()->role_id == 3)
+            <div class="pt-2 pb-3 space-y-1">
+                <x-jet-responsive-nav-link href="{{ route('lecturer.monitoring.index') }}"
+                    :active="request()->routeIs('lecturer.monitoring.index')">
+                    {{ __('Student Monitoring') }}
+                </x-jet-responsive-nav-link>
+            </div>
+        @endif
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="flex items-center px-4">
@@ -205,7 +246,7 @@
                     @csrf
 
                     <x-jet-responsive-nav-link href="{{ route('logout') }}" onclick="event.preventDefault();
-                                    this.closest('form').submit();">
+  this.closest('form').submit();">
                         {{ __('Log Out') }}
                     </x-jet-responsive-nav-link>
                 </form>
