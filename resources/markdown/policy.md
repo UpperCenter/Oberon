@@ -1,3 +1,3 @@
 # Privacy Policy
 
-Edit this file to define the privacy policy for your application.
+We collect and sell all your data for a fat profit.
