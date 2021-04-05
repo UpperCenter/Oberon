@@ -6,7 +6,7 @@
 
         <x-jet-validation-errors class="mb-4" />
 
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('register') }}" x-data="{role_id: 2}">
             @csrf
 
             <div>
@@ -37,6 +37,26 @@
                 <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
                 <x-jet-input id="password_confirmation" class="block w-full mt-1" type="password"
                     name="password_confirmation" required autocomplete="new-password" />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="role_id" value="{{ __('Register as:') }}" />
+                <select name="role_id" x-model="role_id"
+                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    <option value="2">Student</option>
+                    <option value="3">Lecturer</option>
+                </select>
+            </div>
+
+            <div class="mt-4" x-show="role_id == 2">
+                <x-jet-label for="student_id" value="{{ __('Student ID') }}" />
+                <x-jet-input id="student_id" class="block w-full mt-1" type="text" :value="old('student_id')"
+                    name="student_id" />
+            </div>
+
+            <div class="mt-4" x-show="role_id == 3">
+                <x-jet-label for="lecturer_pass" value="{{ __('Lecturer Password') }}" />
+                <x-jet-input id="lecturer_pass" class="block w-full mt-1" type="password" name="lecturer_pass" />
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
