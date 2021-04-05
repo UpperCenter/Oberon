@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-		
+
 		<!-- Primary Meta Tags -->
 		<title>Oberon - The Blazing Fast Cyber Range</title>
 		<meta name="title" content="Oberon - The Blazing Fast Cyber Range">
@@ -24,8 +24,6 @@
 		<meta property="twitter:description" content="Welcome to the online portal for the Oberon Cyber Range.">
 		<meta property="twitter:image" content="{{ asset('images/meta.webp')  }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
-
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
@@ -36,7 +34,7 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body>
-        <div class="font-sans text-gray-900 antialiased">
+        <div class="font-sans antialiased text-gray-900">
             {{ $slot }}
         </div>
     </body>
