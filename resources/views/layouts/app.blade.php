@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-		<!-- Primary Meta Tags -->
-		<title>Oberon - The Blazing Fast Cyber Range</title>
-		<meta name="title" content="Oberon - The Blazing Fast Cyber Range">
-		<meta name="description" content="Welcome to the online portal for the Oberon Cyber Range.">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://cyber.lol/">
-		<meta property="og:title" content="Oberon - The Blazing Fast Cyber Range">
-		<meta property="og:description" content="Welcome to the online portal for the Oberon Cyber Range.">
-		<meta name="og:image" content="{{ asset('images/meta.webp')  }}"/>
+    <!-- Primary Meta Tags -->
+    <title>Oberon - The Blazing Fast Cyber Range</title>
+    <meta name="title" content="Oberon - The Blazing Fast Cyber Range">
+    <meta name="description" content="Welcome to the online portal for the Oberon Cyber Range.">
 
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image">
-		<meta property="twitter:url" content="https://cyber.lol/">
-		<meta property="twitter:title" content="Oberon - The Blazing Fast Cyber Range">
-		<meta property="twitter:description" content="Welcome to the online portal for the Oberon Cyber Range.">
-		<meta property="twitter:image" content="{{ asset('images/meta.webp')  }}">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cyber.lol/">
+    <meta property="og:title" content="Oberon - The Blazing Fast Cyber Range">
+    <meta property="og:description" content="Welcome to the online portal for the Oberon Cyber Range.">
+    <meta name="og:image" content="{{ asset('images/meta.webp') }}" />
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://cyber.lol/">
+    <meta property="twitter:title" content="Oberon - The Blazing Fast Cyber Range">
+    <meta property="twitter:description" content="Welcome to the online portal for the Oberon Cyber Range.">
+    <meta property="twitter:image" content="{{ asset('images/meta.webp') }}">
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
-        @livewireStyles
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-        <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
-    </head>
-    <body class="font-sans antialiased">
-        <x-jet-banner />
+    @livewireStyles
 
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
+    <!-- Scripts -->
+    <script src="{{ mix('js/app.js') }}" defer></script>
+</head>
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+<body class="font-sans antialiased">
+    <x-jet-banner />
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
+    <div class="min-h-screen bg-gray-100">
+        @livewire('navigation-menu')
 
-        @stack('modals')
+        <!-- Page Heading -->
+        @if (isset($header))
+            <header class="bg-white shadow">
+                <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                    {{ $header }}
+                </div>
+            </header>
+        @endif
 
-        @livewireScripts
-    </body>
+        <!-- Page Content -->
+        <main>
+            {{ $slot }}
+        </main>
+    </div>
+
+    @stack('modals')
+
+    @livewireScripts
+</body>
+
 </html>

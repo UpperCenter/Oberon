@@ -17,12 +17,14 @@
 
             <div>
                 <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block w-full mt-1" type="email" name="email" :value="old('email')" required autofocus />
+                <x-jet-input id="email" class="block w-full mt-1" type="email" name="email" :value="old('email')"
+                    required autofocus />
             </div>
 
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block w-full mt-1" type="password" name="password" required autocomplete="current-password" />
+                <x-jet-input id="password" class="block w-full mt-1" type="password" name="password" required
+                    autocomplete="current-password" />
             </div>
 
             <div class="block mt-4">
@@ -32,9 +34,10 @@
                 </label>
             </div>
 
-				<div class="flex items-center justify-end mt-4">
-				@if (Route::has('password.request'))
-                    <a class="text-sm text-gray-600 underline hover:text-gray-900" href="{{ route('password.request') }}">
+            <div class="flex items-center justify-end mt-4">
+                @if (Route::has('password.request'))
+                    <a class="text-sm text-gray-600 underline hover:text-gray-900"
+                        href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
@@ -44,14 +47,15 @@
                 </x-jet-button>
             </div>
 
-			<div class="py-2 mt-6 text-center border-t border-gray-200">
-				<p class="mt-2 text-sm leading-5 text-center text-gray-600 max-w">
-				  Or
-				  <a href="{{ route('register') }}" class="font-medium text-blue-600 transition duration-150 ease-in-out hover:text-blue-500 focus:outline-none focus:underline">
-					create a new account
-				  </a>
-				</p>
-			  </div>
+            <div class="py-2 mt-6 text-center border-t border-gray-200">
+                <p class="mt-2 text-sm leading-5 text-center text-gray-600 max-w">
+                    Or
+                    <a href="{{ route('register') }}"
+                        class="font-medium text-blue-600 transition duration-150 ease-in-out hover:text-blue-500 focus:outline-none focus:underline">
+                        create a new account
+                    </a>
+                </p>
+            </div>
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
