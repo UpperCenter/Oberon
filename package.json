@@ -6,7 +6,7 @@
 		"watch": "mix watch",
 		"watch-poll": "mix watch -- --watch-options-poll=1000",
 		"hot": "mix watch --hot",
-		"prod": "npm run production",
+		"prod": "npm run blade && npm run prettier && npm run production",
 		"production": "mix --production",
 		"prettier": "./node_modules/.bin/prettier --write '**/*.php'",
 		"blade": "./node_modules/.bin/blade-formatter --progress --write '**/*.blade.php'"
