@@ -191,6 +191,12 @@
             </x-jet-responsive-nav-link>
         </div>
 
+        <div class="pt-2 pb-3 space-y-1">
+            <x-jet-responsive-nav-link href="{{ route('downloads') }}" :active="request()->routeIs('downloads')">
+                {{ __('Downloads') }}
+            </x-jet-responsive-nav-link>
+        </div>
+
         @if (auth()->user()->role_id == 1)
             <div class="pt-2 pb-3 space-y-1">
                 <x-jet-responsive-nav-link href="{{ route('administrator.users.index') }}"
