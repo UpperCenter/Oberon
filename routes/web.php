@@ -12,6 +12,12 @@ Route::middleware(['auth:sanctum', 'verified'])
 	})
 	->name('dashboard');
 
+Route::middleware(['auth:sanctum', 'verified'])
+	->get('/downloads', function () {
+		return view('downloads/index');
+	})
+	->name('downloads');
+
 Route::group(['middleware' => 'auth:sanctum', 'verified'], function () {
 	Route::group(
 		[
