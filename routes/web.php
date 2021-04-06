@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OpenVPN;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -17,6 +18,10 @@ Route::middleware(['auth:sanctum', 'verified'])
 		return view('downloads/index');
 	})
 	->name('downloads');
+
+Route::middleware(['auth:sanctum', 'verified'])
+	->get('downloadConfig', [OpenVPN::class, 'downloadConfig'])
+	->name('OpenVPNDownload');
 
 Route::group(['middleware' => 'auth:sanctum', 'verified'], function () {
 	Route::group(
