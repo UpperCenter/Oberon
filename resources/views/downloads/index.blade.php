@@ -4,9 +4,8 @@
             {{ __('Downloads') }}
         </h2>
     </x-slot>
-
-    <div class="p-6 bg-white border-b border-gray-200 sm:px-20">
-        <div class="mt-8 text-2xl">
+	<div class="max-w-6xl pb-4 mx-auto bg-white border-b border-gray-200 shadow sm:px-6 lg:px-8">
+        <div class="max-w-6xl mt-8 text-2xl">
             OpenVPN Configuration Downloads
         </div>
 
