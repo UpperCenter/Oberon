@@ -16,14 +16,14 @@
     <meta property="og:url" content="https://cyber.lol/">
     <meta property="og:title" content="Oberon - The Blazing Fast Cyber Range">
     <meta property="og:description" content="Welcome to the online portal for the Oberon Cyber Range.">
-    <meta name="og:image" content="{{ asset('images/meta.webp') }}" />
+    <meta name="og:image" content="{{ asset('images/logoFull.svg') }}" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://cyber.lol/">
     <meta property="twitter:title" content="Oberon - The Blazing Fast Cyber Range">
     <meta property="twitter:description" content="Welcome to the online portal for the Oberon Cyber Range.">
-    <meta property="twitter:image" content="{{ asset('images/meta.webp') }}">
+    <meta property="twitter:image" content="{{ asset('images/logoFull.svg') }}">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
