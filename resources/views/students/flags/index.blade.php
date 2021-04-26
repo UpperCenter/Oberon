@@ -15,11 +15,11 @@
                                     <tr>
                                         <th scope="col" width="50"
                                             class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase bg-gray-50">
-                                            ID
+                                            IP
                                         </th>
                                         <th scope="col"
                                             class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase bg-gray-50">
-                                            Name
+                                            Instructions
                                         </th>
                                         <th scope="col"
                                             class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase bg-gray-50">
@@ -36,11 +36,11 @@
                                 <tbody class="bg-white divide-y divide-gray-200">
                                     <tr>
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            1
+                                            10.20.0.50
                                         </td>
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            A Witty Flag Name
+                                            Compromise this machine and read <code>/WEB-INF/server.xml</code>.
                                         </td>
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
