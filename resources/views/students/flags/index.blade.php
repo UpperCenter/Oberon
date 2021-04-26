@@ -78,7 +78,7 @@
                                         </td>
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            Access <code>/WEB-INF/server.xml</code>
+                                            Access <code>C:\\Creds.txt</code>
                                         </td>
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
@@ -109,7 +109,7 @@
                                     </tr>
                                 </tbody>
 
-								<tbody class="bg-white divide-y divide-gray-200">
+                                <tbody class="bg-white divide-y divide-gray-200">
                                     <tr>
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
                                             10.20.0.50
