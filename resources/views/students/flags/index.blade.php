@@ -74,7 +74,7 @@
                                 <tbody class="bg-white divide-y divide-gray-200">
                                     <tr>
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            10.20.0.50
+                                            10.30.0.58
                                         </td>
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
