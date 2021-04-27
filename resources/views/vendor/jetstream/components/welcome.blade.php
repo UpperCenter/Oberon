@@ -68,7 +68,7 @@
                 The cyber range has some light documentation outlining how to get connected, what to look out for and
                 how to submit your flags. Feel free to reach out in person for any other questions.
             </div>
-            <a href="https://q.cyber.lol/">
+            <a href="https://docs.cyber.lol/">
                 <div class="flex items-center mt-3 text-sm font-semibold text-indigo-700">
                     <div>Read the documentation</div>
 
