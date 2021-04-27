@@ -40,7 +40,7 @@
                                         </td>
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            Access <code>/WEB-INF/server.xml</code>
+                                            Investigate Apache AJP
                                         </td>
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
@@ -78,7 +78,7 @@
                                         </td>
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            Crack <code>C:\Oberon.md.asc</code>
+                                            Look for Private Keys
                                         </td>
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
