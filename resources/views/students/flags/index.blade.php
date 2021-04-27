@@ -78,7 +78,7 @@
                                         </td>
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            Access <code>C:\\Creds.txt</code>
+                                            Read <code>C:\\Creds.txt</code>
                                         </td>
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
@@ -116,7 +116,7 @@
                                         </td>
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            Access <code>/WEB-INF/server.xml</code>
+                                            Escalate to <code>Administrator</code>
                                         </td>
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
