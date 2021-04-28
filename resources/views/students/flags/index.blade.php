@@ -42,16 +42,17 @@
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
                                             Investigate Apache AJP
                                         </td>
-
-                                        <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            <div class="mb-4 md:w-1/2">
-                                                <x-jet-input action="VerifyFlags" method="POST" type="text"
-                                                    placeholder="OBR{6342599be08384d}" required autofocus />
-                                                <x-jet-button type="submit" class="ml-4">
-                                                    {{ __('Check Flag') }}
-                                                </x-jet-button>
-                                            </div>
-                                        </td>
+                                        <form action="SubmitFlag" method="POST">
+                                            <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
+                                                <div class="mb-4 md:w-1/2">
+                                                    <x-jet-input type="text" placeholder="OBR{6342599be08384d}" required
+                                                        autofocus />
+                                                    <x-jet-button type="submit" class="ml-4">
+                                                        {{ __('Check Flag') }}
+                                                    </x-jet-button>
+                                                </div>
+                                            </td>
+                                        </form>
                                         @if (Session::has('message'))
                                             <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
                                                 <span

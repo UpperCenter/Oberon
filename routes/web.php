@@ -24,14 +24,14 @@ Route::middleware(['auth:sanctum', 'verified'])
 	->name('OpenVPNDownload');
 
 Route::middleware(['auth:sanctum', 'verified'])
-	->post('submit', [FlagVerification::class, 'VerifyFlags'])
+	->post('SubmitFlag', [FlagVerification::class, 'VerifyFlags'])
 	->name('VerifyFlags');
 
 Route::group(['middleware' => 'auth:sanctum', 'verified'], function () {
 	Route::group(
 		[
 			'middleware' => 'role:student',
-			'prefix' => 'student',
+			//'prefix' => 'student',
 			'as' => 'student.',
 		],
 		function () {
