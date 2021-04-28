@@ -15,19 +15,19 @@
                                     <tr>
                                         <th scope="col" width="50"
                                             class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase bg-gray-50">
-                                            IP
+                                            {{ __('IP') }}
                                         </th>
                                         <th scope="col"
                                             class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase bg-gray-50">
-                                            Instructions
+                                            {{ __('Instructions') }}
                                         </th>
                                         <th scope="col"
                                             class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase bg-gray-50">
-                                            Flag Input
+                                            {{ __('Flag Input') }}
                                         </th>
                                         <th scope="col"
                                             class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase bg-gray-50">
-                                            Flag Status
+                                            {{ __('Flag Status') }}
                                         </th>
                                         <th scope="col" width="200" class="px-6 py-3 bg-gray-50">
                                         </th>
@@ -36,11 +36,11 @@
                                 <tbody class="bg-white divide-y divide-gray-200">
                                     <tr>
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            10.20.0.50
+                                            {{ __('10.20.0.50') }}
                                         </td>
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            Investigate Apache AJP
+                                            {{ __('Investigate Apache AJP') }}
                                         </td>
                                         <form action="SubmitFlag" method="POST">
                                             <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
