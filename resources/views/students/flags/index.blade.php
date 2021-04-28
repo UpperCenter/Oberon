@@ -45,67 +45,21 @@
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
                                             <div class="mb-4 md:w-1/2">
-                                                <x-jet-input id="flag" type="text" placeholder="OBR{6342599be08384d}"
-                                                    name="flag" required autofocus />
+                                                <x-jet-input action="VerifyFlags" method="POST" type="text"
+                                                    placeholder="OBR{6342599be08384d}" required autofocus />
+                                                <x-jet-button type="submit" class="ml-4">
+                                                    {{ __('Check Flag') }}
+                                                </x-jet-button>
                                             </div>
                                         </td>
-
-                                        <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            <span
-                                                class="inline-flex px-2 text-xs font-semibold leading-5 text-red-800 bg-red-100 rounded-full">
-                                                Flag Incorrect
-                                            </span>
-                                            <span
-                                                class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
-                                                Flag Correct!
-                                            </span>
-                                        </td>
-
-                                        <td class="px-6 py-4 text-sm font-medium whitespace-nowrap">
-                                            <a href={{ Route('OpenVPNDownload') }}>
-                                                <x-jet-button class="ml-4">
-                                                    {{ __('Submit Flag') }}
-                                                </x-jet-button>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-
-                                <tbody class="bg-white divide-y divide-gray-200">
-                                    <tr>
-                                        <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            10.30.0.58
-                                        </td>
-
-                                        <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            Look for Private Keys
-                                        </td>
-
-                                        <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            <div class="mb-4 md:w-1/2">
-                                                <x-jet-input id="flag" type="text" placeholder="OBR{6342599be08384d}"
-                                                    name="flag" required autofocus />
-                                            </div>
-                                        </td>
-
-                                        <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            <span
-                                                class="inline-flex px-2 text-xs font-semibold leading-5 text-red-800 bg-red-100 rounded-full">
-                                                Flag Incorrect
-                                            </span>
-                                            <span
-                                                class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
-                                                Flag Correct!
-                                            </span>
-                                        </td>
-
-                                        <td class="px-6 py-4 text-sm font-medium whitespace-nowrap">
-                                            <a href={{ Route('OpenVPNDownload') }}>
-                                                <x-jet-button class="ml-4">
-                                                    {{ __('Submit Flag') }}
-                                                </x-jet-button>
-                                            </a>
-                                        </td>
+                                        @if (Session::has('message'))
+                                            <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
+                                                <span
+                                                    class="inline-flex px-2 text-xs font-semibold leading-5 text-red-800 bg-red-100 rounded-full">
+                                                    {{ session('message') }}
+                                                </span>
+                                            </td>
+                                        @endif
                                     </tr>
                                 </tbody>
                             </table>

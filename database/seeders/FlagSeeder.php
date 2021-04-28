@@ -16,6 +16,5 @@ class FlagSeeder extends Seeder
 	{
 		Flag::create(['flags' => 'OBR{1FA528F41E8945C}']);
 		Flag::create(['flags' => 'OBR{5D52EC3938749CC}']);
-		Flag::create(['flags' => 'OBR{524AC7B02AC9CB1}']);
 	}
 }
