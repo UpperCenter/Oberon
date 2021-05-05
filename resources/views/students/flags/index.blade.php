@@ -13,7 +13,7 @@
                             <table class="w-full min-w-full divide-y divide-gray-200">
                                 <thead>
                                     <tr>
-                                        <th scope="col" width="50"
+                                        <th scope="col" width="100"
                                             class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase bg-gray-50">
                                             {{ __('IP') }}
                                         </th>
