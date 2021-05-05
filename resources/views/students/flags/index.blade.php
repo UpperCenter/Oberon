@@ -30,6 +30,7 @@
                                             {{ __('Flag Status') }}
                                         </th>
                                         <th scope="col" width="200" class="px-6 py-3 bg-gray-50">
+                                        {{ __('Submit') }}
                                         </th>
                                     </tr>
                                 </thead>
