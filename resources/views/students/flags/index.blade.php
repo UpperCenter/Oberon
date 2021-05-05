@@ -42,18 +42,6 @@
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
                                             {{ __('Investigate Apache AJP') }}
                                         </td>
-                                        <form action="SubmitFlag" method="POST">
-                                            @csrf
-                                            <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                                <div class="mb-4 md:w-1/2">
-                                                    <x-jet-input type="text" name="CheckFlag1"
-                                                        placeholder="OBR{6342599be08384d}" required autofocus />
-                                                    <x-jet-button type="submit" class="ml-4">
-                                                        {{ __('Check Flag') }}
-                                                    </x-jet-button>
-                                                </div>
-                                            </td>
-                                        </form>
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
                                             @if (isset($flag) && $flag)
                                                 <span
@@ -72,6 +60,69 @@
                                                 </span>
                                             @endif
                                         </td>
+                                        <form action="SubmitFlag" method="POST">
+                                            @csrf
+                                            <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
+                                                <div class="mb-4 md:w-1/2">
+                                                    <x-jet-input type="text" name="CheckFlag1"
+                                                        placeholder="OBR{6342599be08384d}" required autofocus />
+                                                    <x-jet-button type="submit" class="ml-4">
+                                                        {{ __('Check Flag') }}
+                                                    </x-jet-button>
+                                                </div>
+                                            </td>
+                                        </form>
+                                    </tr>
+                                </tbody>
+
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
+                                            10.30.0.58
+                                        </td>
+
+                                        <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
+                                            Look for Private Keys
+                                        </td>
+
+                                        <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
+                                            <div class="mb-4 md:w-1/2">
+                                                <x-jet-input id="flag" type="text" placeholder="OBR{6342599be08384d}"
+                                                    name="flag" required autofocus />
+                                            </div>
+                                        </td>
+
+                                        <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
+                                            @if (isset($flag) && $flag)
+                                                <span
+                                                    class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
+                                                    Flag Correct!
+                                                </span>
+                                            @elseif (isset($flag) && ($flag === false))
+                                                <span
+                                                    class="inline-flex px-2 text-xs font-semibold leading-5 text-red-800 bg-red-100 rounded-full">
+                                                    Flag Incorrect
+                                                </span>
+                                            @else
+                                                <span
+                                                    class="inline-flex px-2 text-xs font-semibold leading-5 text-blue-500 bg-gray-100 rounded-full">
+                                                    No flag submitted
+                                                </span>
+                                            @endif
+                                        </td>
+
+                                        <form action="SubmitFlag" method="POST">
+                                            @csrf
+                                            <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
+                                                <div class="mb-4 md:w-1/2">
+                                                    <x-jet-input type="text" name="CheckFlag1"
+                                                        placeholder="OBR{6342599be08384d}" required autofocus />
+                                                    <x-jet-button type="submit" class="ml-4">
+                                                        {{ __('Check Flag') }}
+                                                    </x-jet-button>
+                                                </div>
+                                            </td>
+                                        </form>
                                     </tr>
                                 </tbody>
                             </table>
