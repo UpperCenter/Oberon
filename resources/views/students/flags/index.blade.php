@@ -93,12 +93,12 @@
                                         </td>
 
                                         <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
-                                            @if (isset($flag) && $flag)
+                                            @if (isset($flag2) && $flag)
                                                 <span
                                                     class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
                                                     Flag Correct!
                                                 </span>
-                                            @elseif (isset($flag) && ($flag === false))
+                                            @elseif (isset($flag2) && ($flag2 === false))
                                                 <span
                                                     class="inline-flex px-2 text-xs font-semibold leading-5 text-red-800 bg-red-100 rounded-full">
                                                     Flag Incorrect
@@ -111,11 +111,11 @@
                                             @endif
                                         </td>
 
-                                        <form action="SubmitFlag" method="POST">
+                                        <form action="SubmitFlag2" method="POST">
                                             @csrf
                                             <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
                                                 <div class="mb-4 md:w-1/2">
-                                                    <x-jet-input type="text" name="CheckFlag1"
+                                                    <x-jet-input type="text" name="CheckFlag2"
                                                         placeholder="OBR{6342599be08384d}" required autofocus />
                                                     <x-jet-button type="submit" class="ml-4">
                                                         {{ __('Check Flag') }}
