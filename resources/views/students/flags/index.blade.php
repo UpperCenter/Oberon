@@ -67,10 +67,12 @@
                                                 <div class="mb-4 md:w-1/2">
                                                     <x-jet-input type="text" name="CheckFlag1"
                                                         placeholder="OBR{6342599be08384d}" required autofocus />
-                                                    <x-jet-button type="submit" class="ml-4">
-                                                        {{ __('Check Flag') }}
-                                                    </x-jet-button>
                                                 </div>
+                                            </td>
+                                            <td>
+                                            <x-jet-button type="submit" class="ml-4">
+                                                    {{ __('Check Flag') }}
+                                            </x-jet-button>
                                             </td>
                                         </form>
                                     </tr>
