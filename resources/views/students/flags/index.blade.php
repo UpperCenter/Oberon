@@ -30,7 +30,6 @@
                                             {{ __('Flag Status') }}
                                         </th>
                                         <th scope="col" width="200" class="px-6 py-3 bg-gray-50">
-                                        {{ __('Submit') }}
                                         </th>
                                     </tr>
                                 </thead>
@@ -109,12 +108,14 @@
                                             @csrf
                                             <td class="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
                                                 <div class="mb-4 md:w-1/2">
-                                                    <x-jet-input type="text" name="CheckFlag2"
-                                                        placeholder="OBR{6508820d92ab75e}" required autofocus />
-                                                    <x-jet-button type="submit" class="ml-4">
-                                                        {{ __('Check Flag') }}
-                                                    </x-jet-button>
+                                                    <x-jet-input type="text" name="CheckFlag1"
+                                                        placeholder="OBR{6342599be08384d}" required autofocus />
                                                 </div>
+                                            </td>
+                                            <td>
+                                            <x-jet-button type="submit" class="ml-4">
+                                                    {{ __('Check Flag') }}
+                                            </x-jet-button>
                                             </td>
                                         </form>
                                     </tr>
